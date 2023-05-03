@@ -1,18 +1,18 @@
 {
-    "schema_version": "v1",
-    "name_for_human": "Nutrient Data Plugin",
-    "name_for_model": "nutrientdata",
-    "description_for_human": "Plugin for searching and fetching food data from the USDA FoodData Central API.",
-    "description_for_model": "Plugin for searching and fetching food data from the USDA FoodData Central API. You can search for foods and get detailed nutritional information about them.",
-    "auth": {
-        "type": "none"
-    },
-    "api": {
-        "type": "openapi",
-        "url": "https://nutrient-plugin.junykallukalam.repl.co/.well-known/openapi.yaml",
-        "is_user_authenticated": false
-    },
-    "logo_url": "https://nutrient-plugin.junykallukalam.repl.co/logo.png",
-    "contact_email": "juny.kallukalam@gmail.com",
-    "legal_info_url": "https://www.example.com/legal"
+  "schema_version": "v1",
+  "name_for_human": "Nutrient Data Plugin",
+  "name_for_model": "nutrientdata",
+  "description_for_human": "Plugin for searching and fetching food data from the USDA FoodData Central API.",
+  "description_for_model": "Plugin for searching and fetching food data from the USDA FoodData Central API. You can search for foods and get detailed nutritional information about them.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://nutrient-plugin.junykallukalam.repl.co/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://nutrient-plugin.junykallukalam.repl.co/logo.png",
+  "contact_email": "juny.kallukalam@gmail.com",
+  "legal_info_url": "https://www.example.com/legal"
 }

@@ -18,13 +18,13 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/foodSearchResponse'
-        "400":
+        '400':
           description: Bad Request
           content:
             application/json:
@@ -42,13 +42,13 @@ paths:
           schema:
             type: integer
       responses:
-        "200":
+        '200':
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/foodDetailsResponse'
-        "400":
+        '400':
           description: Bad Request
           content:
             application/json:
