@@ -1,0 +1,109 @@
+openapi: 3.0.1
+info:
+  title: Food Data Plugin
+  description: A plugin that connects to the USDA FoodData Central API to search for foods and fetch detailed nutritional information.
+  version: 'v1'
+servers:
+  - url: https://nutrient-plugin.junykallukalam.repl.co
+paths:
+  /food:
+    get:
+      operationId: fetchFoodData
+      summary: Search for foods using a query
+      parameters:
+        - name: query
+          in: query
+          description: The query used to search for foods
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/foodSearchResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorResponse'
+  /food/{fdc_id}:
+    get:
+      operationId: fetchFoodDetails
+      summary: Get detailed nutritional information about a specific food
+      parameters:
+        - name: fdc_id
+          in: path
+          description: The FoodData Central ID of the food
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/foodDetailsResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorResponse'
+components:
+  schemas:
+    foodSearchResponse:
+      type: object
+      properties:
+        foods:
+          type: array
+          items:
+            type: object
+            properties:
+              fdcId:
+                type: integer
+                description: The FoodData Central ID of the food
+              description:
+                type: string
+                description: The name or description of the food
+      description: The search results containing foods matching the query
+
+    foodDetailsResponse:
+      type: object
+      properties:
+        fdcId:
+          type: integer
+          description: The FoodData Central ID of the food
+        description:
+          type: string
+          description: The name or description of the food
+        foodNutrients:
+          type: array
+          items:
+            type: object
+            properties:
+              nutrient:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the nutrient
+                  unitName:
+                    type: string
+                    description: The unit of measurement for the nutrient
+              amount:
+                type: number
+                format: float
+                description: The amount of the nutrient in the food
+      description: Detailed nutritional information about a specific food
+
+    errorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: An error message describing the issue
