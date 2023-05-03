@@ -43,6 +43,7 @@ def get_food_details(fdc_id):
     raise Exception(f"Error: {response.status_code}, {response.text}")
 
 
+# test changes
 @app.route('/food', methods=['GET'])
 def fetch_food_data():
   app.logger.info("Fetching food data")
