@@ -4,7 +4,7 @@ info:
   description: A plugin that connects to the USDA FoodData Central API to search for foods and fetch detailed nutritional information.
   version: 'v1'
 servers:
-  - url: https://nutrient-plugin.junykallukalam.repl.co
+  - url: https://sea-turtle-app-egz8c.ondigitalocean.app
 paths:
   /food:
     get:

@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://nutrient-plugin.junykallukalam.repl.co/.well-known/openapi.yaml",
+    "url": "https://sea-turtle-app-egz8c.ondigitalocean.app/.well-known/openapi.yaml",
     "is_user_authenticated": false
   },
-  "logo_url": "https://nutrient-plugin.junykallukalam.repl.co/logo.png",
+  "logo_url": "https://sea-turtle-app-egz8c.ondigitalocean.app/logo.png",
   "contact_email": "juny.kallukalam@gmail.com",
   "legal_info_url": "https://www.example.com/legal"
 }
